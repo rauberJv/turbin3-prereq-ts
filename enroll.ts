@@ -23,12 +23,15 @@ const [enrollment_key, _bump] = PublicKey.findProgramAddressSync(enrollment_seed
         const txhash = await program.methods.complete(github)
             .accounts({
                 signer: keypair.publicKey,
+                prereq: enrollment_key,
+                systemAccount: program.programId
             })
             .signers([
                 keypair
             ])
             .rpc();
-        
+        const txLink = `https://explorer.solana.com/tx/${txhash}?cluster=devnet`;
+        console.log(`Success! Check out your TX here: ${txLink}`);
     } catch (error) {
         console.error(`Ooops, something went wrong: ${error}`);
     }

@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IDL = void 0;
-exports.IDL = {
-    address: "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
+{
+    "address": "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
     "metadata": {
         "name": "wba_prereq",
         "version": "0.1.0",
@@ -53,7 +50,7 @@ exports.IDL = {
                 },
                 {
                     "name": "system_program",
-                    address: "11111111111111111111111111111111"
+                    "address": "11111111111111111111111111111111"
                 }
             ],
             "args": [
@@ -87,7 +84,7 @@ exports.IDL = {
                 },
                 {
                     "name": "system_program",
-                    address: "11111111111111111111111111111111"
+                    "address": "11111111111111111111111111111111"
                 }
             ],
             "args": [
@@ -138,4 +135,4 @@ exports.IDL = {
             }
         }
     ]
-};
+}

@@ -1,5 +1,7 @@
+import idl from "./Turbin3-prereq.json";
+
 export type Turbin3Prereq = {
-    "address": "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
+    address: "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
     "metadata": {
       "name": "wba_prereq",
       "version": "0.1.0",
@@ -50,7 +52,7 @@ export type Turbin3Prereq = {
           },
           {
             "name": "system_program",
-            "address": "11111111111111111111111111111111"
+            address: "11111111111111111111111111111111"
           }
         ],
         "args": [
@@ -84,7 +86,7 @@ export type Turbin3Prereq = {
           },
           {
             "name": "system_program",
-            "address": "11111111111111111111111111111111"
+            address: "11111111111111111111111111111111"
           }
         ],
         "args": [
@@ -137,8 +139,8 @@ export type Turbin3Prereq = {
     ]
   }
 
-  export const IDL: Turbin3Prereq = {
-  "address": "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
+export const IDL: Turbin3Prereq = {
+  address: "WBAQSygkwMox2VuWKU133NxFrpDZUBdvSBeaBEue2Jq",
   "metadata": {
     "name": "wba_prereq",
     "version": "0.1.0",
@@ -189,7 +191,7 @@ export type Turbin3Prereq = {
         },
         {
           "name": "system_program",
-          "address": "11111111111111111111111111111111"
+          address: "11111111111111111111111111111111"
         }
       ],
       "args": [
@@ -223,7 +225,7 @@ export type Turbin3Prereq = {
         },
         {
           "name": "system_program",
-          "address": "11111111111111111111111111111111"
+          address: "11111111111111111111111111111111"
         }
       ],
       "args": [

@@ -5,7 +5,7 @@ import wallet from "./Turbin3-wallet.json";
 
 const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
 
-const github = Buffer.from("rauberjv", "utf8");
+const github = Buffer.from("rauberJv", "utf8");
 
 const connection = new Connection("https://api.devnet.solana.com");
 
@@ -21,11 +21,11 @@ const [enrollment_key, _bump] = PublicKey.findProgramAddressSync(enrollment_seed
 (async () => {
     try {
         const txhash = await program.methods.complete(github)
-            .accounts({
-                signer: keypair.publicKey,
-                prereq: enrollment_key,
-                systemAccount: program.programId
-            })
+        .accounts({
+            signer: keypair.publicKey,
+            // @ts-ignore
+            prereq: enrollment_key,
+        })
             .signers([
                 keypair
             ])

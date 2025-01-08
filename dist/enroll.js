@@ -17,7 +17,7 @@ const anchor_1 = require("@coral-xyz/anchor");
 const Turbin3_prereq_1 = require("./programs/Turbin3-prereq");
 const Turbin3_wallet_json_1 = __importDefault(require("./Turbin3-wallet.json"));
 const keypair = web3_js_1.Keypair.fromSecretKey(new Uint8Array(Turbin3_wallet_json_1.default));
-const github = Buffer.from("rauberjv", "utf8");
+const github = Buffer.from("rauberJv", "utf8");
 const connection = new web3_js_1.Connection("https://api.devnet.solana.com");
 const provider = new anchor_1.AnchorProvider(connection, new anchor_1.Wallet(keypair), {
     commitment: "confirmed"
@@ -30,11 +30,15 @@ const [enrollment_key, _bump] = web3_js_1.PublicKey.findProgramAddressSync(enrol
         const txhash = yield program.methods.complete(github)
             .accounts({
             signer: keypair.publicKey,
+            // @ts-ignore
+            prereq: enrollment_key,
         })
             .signers([
             keypair
         ])
             .rpc();
+        const txLink = `https://explorer.solana.com/tx/${txhash}?cluster=devnet`;
+        console.log(`Success! Check out your TX here: ${txLink}`);
     }
     catch (error) {
         console.error(`Ooops, something went wrong: ${error}`);

@@ -44,3 +44,4 @@ function transact(from, to) {
         }
     });
 }
+transact(from, to);

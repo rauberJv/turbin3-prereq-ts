@@ -46,3 +46,5 @@ async function transact(from: Keypair, to: PublicKey): Promise<void> {
         console.error(`Oops, something went wrong: ${error}`);
     }
 }
+
+transact(from, to);
